@@ -1,0 +1,353 @@
+/* Основні кольори сайту */
+:root {
+  --background: #121216;
+  --site-background: #1e1e24;
+  --panel-background: #18181c;
+  --card-background: #25252c;
+  --accent: #9b59b6;
+  --accent-hover: #8e44ad;
+  --text: #e0e0e0;
+  --border: #aaa;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Montserrat', Arial, sans-serif;
+  background-color: var(--background);
+  color: var(--text);
+}
+
+.site {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  max-width: 1400px;
+  margin: 0 auto;
+  background-color: var(--site-background);
+  border-left: 2px dashed #ccc;
+  border-right: 2px dashed #ccc;
+}
+
+header {
+  padding: 30px 40px;
+  border-bottom: 2px dashed var(--border);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--panel-background);
+}
+
+main {
+  flex: 1;
+  display: flex;
+}
+
+footer {
+  padding: 30px 40px;
+  border-top: 2px dashed var(--border);
+  font-size: 18px;
+  color: #999;
+  text-align: left;
+  line-height: 1.5;
+}
+
+.logo {
+  font-size: 38px;
+  font-weight: bold;
+}
+
+.sidebar {
+  width: 320px;
+  flex-shrink: 0;
+  padding: 35px 25px;
+  border-right: 2px dashed var(--border);
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.nav-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.nav-list li {
+  margin-bottom: 14px;
+}
+
+.nav-list a {
+  text-decoration: none;
+  color: #a0a0b0;
+  font-weight: 500;
+  display: block;
+  padding: 8px 0;
+  border-bottom: 2px dotted #ccc;
+  font-size: 20px;
+}
+
+.nav-list a:hover,
+.nav-list a.active {
+  color: var(--accent);
+  font-weight: bold;
+}
+
+.mini-illustration {
+  height: 160px;
+  border: 2px solid #bbb;
+  background-color: #141418;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  color: #777;
+  font-size: 20px;
+  overflow: hidden;
+}
+
+.mini-illustration img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.sidebar-note {
+  font-size: 18px;
+  color: #999;
+  font-style: italic;
+  line-height: 1.5;
+}
+
+.content {
+  flex: 1;
+  min-width: 0;
+  padding: 35px;
+}
+
+.content-subtitle {
+  font-size: 16px;
+  color: var(--accent);
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+.content h1 {
+  margin: 0 0 20px;
+  font-size: 42px;
+  color: #fff;
+  line-height: 1.2;
+}
+
+.intro-text {
+  font-size: 19px;
+  color: #ccc;
+  margin-bottom: 25px;
+  line-height: 1.6;
+}
+
+.main-banner {
+  height: 300px;
+  border: 2px solid #999;
+  background-color: #141418;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 25px;
+  overflow: hidden;
+}
+
+.main-banner img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.btn {
+  display: inline-block;
+  padding: 12px 28px;
+  background-color: var(--accent);
+  border: 2px solid var(--accent-hover);
+  border-radius: 6px;
+  color: #fff;
+  font-size: 18px;
+  font-weight: bold;
+  text-decoration: none;
+  margin-bottom: 35px;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: var(--accent-hover);
+}
+
+.section-title {
+  font-size: 27px;
+  margin-bottom: 18px;
+  font-weight: bold;
+}
+
+.cards-grid {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.card {
+  flex: 1 1 200px;
+  border: 2px solid #ccc;
+  padding: 22px;
+  background-color: var(--card-background);
+  transition: 0.3s;
+}
+
+.card h4 {
+  margin: 0 0 12px;
+  font-size: 22px;
+}
+
+.card p {
+  margin: 0;
+  font-size: 17px;
+  color: #aaa;
+  line-height: 1.5;
+}
+
+.sidebar h3 {
+  margin-top: 0;
+  font-size: 27px;
+  border-bottom: 2px solid #ddd;
+  padding-bottom: 12px;
+  color: #fff;
+}
+
+.content .intro-text {
+  max-width: 900px;
+}
+
+.cards-grid .card h4 {
+  color: #fff;
+}
+
+.nav-list a:active {
+  color: #fff;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  border-color: var(--accent);
+}
+
+.card:active {
+  transform: scale(0.98);
+}
+
+.hero,
+.conclusion {
+  text-align: center;
+  padding: 30px;
+}
+
+a.active {
+  color: var(--accent);
+  font-weight: bold;
+  border-bottom: 2px solid var(--accent);
+}
+
+@media (max-width: 768px) {
+  .site {
+    border: none;
+  }
+
+  header {
+    padding: 20px;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .logo {
+    font-size: 28px;
+  }
+
+  main {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    width: 100%;
+    padding: 25px 20px;
+    border-right: none;
+    border-bottom: 2px dashed var(--border);
+    gap: 22px;
+  }
+
+  .sidebar h3 {
+    font-size: 25px;
+  }
+
+  .nav-list a {
+    font-size: 18px;
+  }
+
+  .mini-illustration {
+    height: 150px;
+  }
+
+  .sidebar-note {
+    font-size: 17px;
+  }
+
+  .content {
+    padding: 25px 20px;
+  }
+
+  .content-subtitle {
+    font-size: 15px;
+  }
+
+  .content h1 {
+    font-size: 34px;
+  }
+
+  .intro-text {
+    font-size: 18px;
+  }
+
+  .main-banner {
+    height: 210px;
+  }
+
+  .btn {
+    font-size: 17px;
+    padding: 11px 22px;
+  }
+
+  .section-title {
+    font-size: 25px;
+  }
+
+  .cards-grid {
+    flex-direction: column;
+  }
+
+  .card {
+    width: 100%;
+  }
+
+  .card h4 {
+    font-size: 21px;
+  }
+
+  .card p {
+    font-size: 17px;
+  }
+
+  footer {
+    padding: 20px;
+    font-size: 15px;
+    overflow-wrap: anywhere;
+  }
+}
